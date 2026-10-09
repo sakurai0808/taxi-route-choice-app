@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タクシールート出題アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>ルート出題</h1>
+    <p class="lead">発地から着地までのルートを考えてみよう</p>
+
+    <section class="card" aria-live="polite">
+      <div class="row">
+        <span class="label">発</span>
+        <a id="origin" class="place" target="_blank" rel="noopener">-</a>
+      </div>
+      <div class="arrow">↓</div>
+      <div class="row">
+        <span class="label">着</span>
+        <a id="destination" class="place" target="_blank" rel="noopener">-</a>
+      </div>
+      <div class="meta">
+        <span id="daytype" class="badge">-</span>
+        <span id="time" class="time">--:--</span>
+      </div>
+    </section>
+
+    <button id="draw" type="button" disabled>読み込み中…</button>
+    <p id="status" class="status"></p>
+
+    <footer>
+      施設データ: <a href="https://tokyotaximap.com/" target="_blank" rel="noopener">東京都心タクマップ</a>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
